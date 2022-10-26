@@ -8,12 +8,14 @@ const btnsOpenModal = document.querySelectorAll('.show-modal');
 
 // Fn to remove the classes which hide the modal window
 const openModal = function () {
+  // Dont need (.) befores class name
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
 };
 
 // Fn to add back the classes which hide the modal window
 const closeModal = function () {
+  // Dont need (.) befores class name
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
 };
