@@ -16,3 +16,10 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
     overlay.classList.remove('hidden');
   });
 }
+
+//Close the modal window on a click event on btnsCloseModal
+btnsCloseModal.addEventListener('click', function () {
+  /* Adding back the classes on a click event on btnsCloseModal which are hiding the modal window  */
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+});
