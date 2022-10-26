@@ -31,3 +31,19 @@ btnsCloseModal.addEventListener('click', closeModal);
 
 //Close the modal window on a click event on overlay: basically outside the modal window
 overlay.addEventListener('click', closeModal);
+
+/* HANDLING AN "ESC" KEYPRESS EVENT 
+Keyboard events are global events because they do not happen on one specific element, so for gloabal events like a keyboard event we listen on the whole document.
+
+Whenever a key is pressed in the keyboard a object about the event is generated containing the info about the event, so now from the event handler function we can access the object.
+
+so here when a keydown even occurs we are telling js to call the eventhandler function will the eventobject function as an argument
+ */
+
+document.addEventListener('keydown', function (e) {
+  console.log(e.key);
+  /* If the pressed key is escape and if the modal does not contain the class of hidden close the modal  */
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
